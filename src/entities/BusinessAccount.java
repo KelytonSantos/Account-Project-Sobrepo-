@@ -25,4 +25,10 @@ public class BusinessAccount extends Account{
 			balance += amount - 10.0;
 		}
 	}
+
+	@Override
+	public void withdraw(double amount){
+		super.withdraw(amount);//efetuei o saque normal
+		balance -= 2.0; //Na linha 33 eu reutilizei código(em vez de criar outro). Na linha 34 eu acrescentei um desconto de 2.0
+	}
 }
